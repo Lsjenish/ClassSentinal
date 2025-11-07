@@ -1,7 +1,8 @@
 import axious from "axios"
 import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./ActionType"
-import { API_URL, isAuthenticated } from "../../services/api"
+import { API_URL} from "../../services/api"
 
+export var isAuthenticated = false;
 
 export const registerUser = (reqData) => async (dispatch) => {
     dispatch({type : REGISTER_REQUEST})

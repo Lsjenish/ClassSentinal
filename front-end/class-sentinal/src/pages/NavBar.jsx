@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { logOutUser } from "../state/auth/Action";
 
 export default function Navbar() {
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const handleLogout = () => {
-    console.log("hi");
-    localStorage.clear();
-    navigate("/login");
+    dispatch(logOutUser())
   };
 
   return (
